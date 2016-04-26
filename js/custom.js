@@ -79,13 +79,17 @@ tpj(document).ready(function() {
 // the second parameter determines how fast it moves - which influences where the image is on the y axis - so part of the image may
 // seem cut off when it loads but as you scroll it will be fully shown
 
-tpj(document).ready(function() {
-	tpj('#headerSection').parallax('50%', .20);
-});
+// tpj(document).ready(function() {
+// 	tpj('#headerSection').parallax('50%', .20);
+// });
 
-tpj(document).ready(function() {
+    tpj('#headerSection').parallax('50%', .20);
+
     tpj('#headerSection .logo').parallax('50%', .9);
-})
+
+// tpj(document).ready(function() {
+//     tpj('#headerSection .logo').parallax('50%', .9);
+// })
 
 tpj(document).ready(function() {
     tpj('#missionSection').parallax('50%', .60);
