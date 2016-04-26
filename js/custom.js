@@ -55,26 +55,42 @@ tpj(document).ready(function(){
   tpj(".carouselStyle .owl-controls").addClass("newsControlDesign");
 });
 
-tpj(document).ready(function() {
-	tpj(".natureImages").slick({
-	  slidesToShow: 1,
-	  slidesToScroll: 1,
-	  draggable: false,
-	  dots: true,
-	  arrows: false
-	})
-});
+// tpj(document).ready(function() {
+// 	tpj(".natureImages").slick({
+// 	  slidesToShow: 1,
+// 	  slidesToScroll: 1,
+// 	  draggable: false,
+// 	  dots: true,
+// 	  arrows: false
+// 	})
+// });
 
 tpj(document).ready(function() {
 	tpj('.missionStatements').slick({
 	  slidesToShow: 1,
 	  slidesToScroll: 1,
 	  draggable: false,
-	  dots: true,
-	  arrows: false
+	  dots: false,
+	  arrows: true,
 	})
-})
+});
+
+// the first parameter sets the X - so if it is at 50% it centers the image, b/c it is 50% in from its original (0,0) coordinates
+// the second parameter determines how fast it moves - which influences where the image is on the y axis - so part of the image may
+// seem cut off when it loads but as you scroll it will be fully shown
+
+// tpj(document).ready(function() {
+// 	tpj('#headerSection').parallax('50%', .20);
+// });
+
+    tpj('#headerSection').parallax('50%', .20);
+
+    tpj('#headerSection .logo').parallax('50%', .9);
+
+// tpj(document).ready(function() {
+//     tpj('#headerSection .logo').parallax('50%', .9);
+// })
 
 tpj(document).ready(function() {
-	tpj
-})
+    tpj('#missionSection').parallax('50%', .60);
+});

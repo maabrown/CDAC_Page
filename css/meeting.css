@@ -1,0 +1,104 @@
+
+.titleDiv {
+	font-size: 45px;
+	margin-top: 30px;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+.titleSubtitle {
+	font-style: italic;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-size: 14px;
+}
+
+.mtgInfoDiv {
+	margin-top: 100px;
+	margin-left: 35px;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	display: block;
+}
+
+.mtgDate h1 {
+	font-weight: 900;
+}
+
+
+.mtgLocation {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+
+.mtgOverviewText {
+	padding-right: 300px;
+	margin-bottom: 30px;
+}
+
+
+
+.mtgLinks {
+	display: inline-flex;
+	height: 50px;
+}
+
+.mtgLinks a {
+	display: inline-block;
+	padding-right: 20px;
+	text-decoration: underline;
+}
+
+.mtgLinks p {
+	margin: auto;
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+
+hr {
+	border-top-width: 10px;
+}
+
+.mtgVideo {
+	display: inline-flex;
+
+	height: 94px;
+}
+
+.mtgVideo a {
+	display: inline-block;
+	padding-right: 20px;
+	text-decoration: underline;
+}
+
+.mtgVideo p {
+	margin: auto;
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+
+.mtgPresD1 {
+	margin-top: 35px;
+}
+
+.mtgPresD2 {
+	margin-top: 35px;
+}
+
+.mtgPresD1 table {
+	border-style: hidden;
+}
+
+.mtgPresD2 table {
+	border-style: hidden;
+}
+
+.mtgPresD1 tr {
+	border-style: hidden;
+}
+
+.mtgPresD2 tr {
+	border-style: hidden;
+}
+
+.presDiv {
+
+}

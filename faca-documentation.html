@@ -101,7 +101,7 @@ body.icompany, #wap-menu ul.sf-menu li span.tip a, .ei-title h3, #main_slider .s
     }
 	
 	    
-    /* theme color scheme goes here ----------- */
+    /* Theme color scheme goes here ----------- */
    
     a, a:hover, .color:hover, ul.menu li a:hover , #footer-bar a:hover, #footer-region a, .btn.btn-plain {
    		color: #1d69bf ;
@@ -154,7 +154,7 @@ body.icompany, #wap-menu ul.sf-menu li span.tip a, .ei-title h3, #main_slider .s
     #bottom-region a{
     	color: #a5c3e5    }
  
-    .theme-border, .sf-menu li.sfHover ul, #page-wrapper,  td, #forum .table td, .border-color, .banner, #footer-bar 
+    .theme-border, .sf-menu li.sfHover ul, #page-wrapper,  th, #forum .table th, .border-color, .banner, #footer-bar 
     {
 		border-color: #1d69bf ;
 	}
@@ -209,7 +209,7 @@ body.icompany, #wap-menu ul.sf-menu li span.tip a, .ei-title h3, #main_slider .s
 	input[type="datetime"]:focus,
 	input[type="datetime-local"]:focus,
 	input[type="date"]:focus,
-	input[type="montd"]:focus,
+	input[type="month"]:focus,
 	input[type="time"]:focus,
 	input[type="week"]:focus,
 	input[type="number"]:focus,
@@ -301,7 +301,6 @@ body.icompany, #wap-menu ul.sf-menu li span.tip a, .ei-title h3, #main_slider .s
 		<link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
 
 		<!-- Bootstrap core CSS -->
 		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -325,9 +324,9 @@ body.icompany, #wap-menu ul.sf-menu li span.tip a, .ei-title h3, #main_slider .s
 		<link rel="stylesheet" type="text/css" href="plugins/slick/slick-theme.css">
 		<link href="plugins/hover/hover-min.css" rel="stylesheet">		
 		<link href="plugins/jquery.countdown/jquery.countdown.css" rel="stylesheet">
-		<!-- the Project core CSS file -->
+		<!-- The Project core CSS file -->
 		<!-- <link href="css/style.css" rel="stylesheet" > -->
-		<!-- Color Scheme (In order to change the color scheme, replace the blue.css witd the color scheme tdat you prefer)-->
+		<!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer)-->
 		<!-- <link href="css/skins/orange.css" rel="stylesheet"> -->
 		
 
@@ -391,7 +390,7 @@ var usagov_sayt_url = 'http://search.usa.gov/sayt?aid=4163&';var aid = 'esa';
 
 			<!--img preloader-->
 
-			<script type="text/javascript">(function ($) { $.fn.preloader=function(options){var defaults={delay:200,preload_parent:"a",check_timer:300,ondone:function(){},oneachload:function(image){},fadein:500};var options=$.extend(defaults,options),root=$(tdis),images=root.find("img").css({"visibility":"hidden",opacity:0}),timer,counter=0,i=0,checkFlag=[],delaySum=options.delay,init=function(){timer=setInterval(function(){if(counter>=checkFlag.lengtd){clearInterval(timer);options.ondone();return}for(i=0;i<images.lengtd;i++){if(images[i].complete==true){if(checkFlag[i]==false){checkFlag[i]=true;options.oneachload(images[i]);counter++;delaySum=delaySum+options.delay}$(images[i]).css("visibility","visible").delay(delaySum).animate({opacity:1},options.fadein,function(){$(tdis).parent().removeClass("preloader")})}}},options.check_timer)};images.each(function(){if($(tdis).parent(options.preload_parent).lengtd==0)$(tdis).wrap("<a class='preloader' />");else $(tdis).parent().addClass("preloader");checkFlag[i++]=false});images=$.makeArray(images);var icon=jQuery("<img />",{id:'loadingicon',src:'/sites/all/themes/icompany/img/89.gif'}).hide().appendTo("body");timer=setInterval(function(){if(icon[0].complete==true){clearInterval(timer);init();icon.remove();return}},100)} })(jQuery);</script>
+			<script type="text/javascript">(function ($) { $.fn.preloader=function(options){var defaults={delay:200,preload_parent:"a",check_timer:300,ondone:function(){},oneachload:function(image){},fadein:500};var options=$.extend(defaults,options),root=$(this),images=root.find("img").css({"visibility":"hidden",opacity:0}),timer,counter=0,i=0,checkFlag=[],delaySum=options.delay,init=function(){timer=setInterval(function(){if(counter>=checkFlag.length){clearInterval(timer);options.ondone();return}for(i=0;i<images.length;i++){if(images[i].complete==true){if(checkFlag[i]==false){checkFlag[i]=true;options.oneachload(images[i]);counter++;delaySum=delaySum+options.delay}$(images[i]).css("visibility","visible").delay(delaySum).animate({opacity:1},options.fadein,function(){$(this).parent().removeClass("preloader")})}}},options.check_timer)};images.each(function(){if($(this).parent(options.preload_parent).length==0)$(this).wrap("<a class='preloader' />");else $(this).parent().addClass("preloader");checkFlag[i++]=false});images=$.makeArray(images);var icon=jQuery("<img />",{id:'loadingicon',src:'/sites/all/themes/icompany/img/89.gif'}).hide().appendTo("body");timer=setInterval(function(){if(icon[0].complete==true){clearInterval(timer);init();icon.remove();return}},100)} })(jQuery);</script>
 			<!--script executions -->
 <script type="text/javascript">
 
@@ -400,11 +399,11 @@ var usagov_sayt_url = 'http://search.usa.gov/sayt?aid=4163&';var aid = 'esa';
 						attach:function (context, settings) {
 							$('img.captioned').wrap("<figure></figure>");
 							$("img.captioned").each(function (i, ele) {
-								var title = tdis.title;
-								$(tdis).closest("figure").append("<figcaption>" + tdis.title + "</figcaption>");
+								var title = this.title;
+								$(this).closest("figure").append("<figcaption>" + this.title + "</figcaption>");
 							});
 							$('img.captioned').wrap(function() {
-								return "<a href='" + tdis.src + "'/>";
+								return "<a href='" + this.src + "'/>";
 							});
 							
 				}}}) (jQuery);
@@ -453,13 +452,13 @@ var usagov_sayt_url = 'http://search.usa.gov/sayt?aid=4163&';var aid = 'esa';
 	
 	// mobile nav	
 	(function ($) {
-		// remove tip/desc text from menu if screen is less tdan 979px wide
+		// remove tip/desc text from menu if screen is less than 979px wide
 		$(document).ready(function () { 
-			var ic_windowwidth;
-			ic_windowwidth = $(window).width();
+			var ic_windowWidth;
+			ic_windowWidth = $(window).width();
 			var userAlreadyOnMobile;
 			
-			if(ic_windowwidth < 980){
+			if(ic_windowWidth < 980){
 				$('span.tip').remove();
 				//$('.mainNavImage').remove(); //KC Added
 				userAlreadyOnMobile = true;				
@@ -470,10 +469,10 @@ var usagov_sayt_url = 'http://search.usa.gov/sayt?aid=4163&';var aid = 'esa';
 			
 			$(window).resize(function(){
 				
-				var ic_NewWindowwidth;
-				ic_NewWindowwidth = $(window).width();
+				var ic_NewWindowWidth;
+				ic_NewWindowWidth = $(window).width();
 				
-				if(ic_NewWindowwidth < 980 && isSelectNavFirstResize == 'first' && userAlreadyOnMobile != true){
+				if(ic_NewWindowWidth < 980 && isSelectNavFirstResize == 'first' && userAlreadyOnMobile != true){
 					 
 					$('.selectnav').remove();
 					//$('.mainNavImage').remove(); //KC Added
@@ -510,7 +509,7 @@ var usagov_sayt_url = 'http://search.usa.gov/sayt?aid=4163&';var aid = 'esa';
 	(function ($) {
     	$(function() {
     		$(window).scroll(function() {
-    			if($(tdis).scrollTop() != 0) {
+    			if($(this).scrollTop() != 0) {
     				$('#toTop').fadeIn();	
     			} else {
     				$('#toTop').fadeOut();
@@ -549,11 +548,11 @@ var usagov_sayt_url = 'http://search.usa.gov/sayt?aid=4163&';var aid = 'esa';
 					'sSearch': '<div class="filter"></div>'
 					},
 				"bPaginate": false,
-				"bLengtdChange": false,
+				"bLengthChange": false,
 				"bFilter": true,
 				"bSort": false,
 				"bInfo": false,
-				"bAutowidth": false
+				"bAutoWidth": false
 			});
 		$('.datatable').find('input').attr('placeholder', 'Filter... ');			
 		}); 
@@ -574,7 +573,7 @@ var usagov_sayt_url = 'http://search.usa.gov/sayt?aid=4163&';var aid = 'esa';
 			<a class="social-icon-1" data-original-title="ESA on Facebook" data-placement="bottom" rel="tooltip" href="https://www.facebook.com/econandstatisticsadministration" target="_blank"><span class="icon-circle-light-facebook"></span> </a>
 			<span class="header-social-text">Connect with Us</span>
 		</div>
-		<div class="simplenews-subscribe custom-subscribe-form-header"> <!--<form class="simplenews-subscribe custom-subscribe-form-header" action="https://service.govdelivery.com/accounts/USESAEI/subscriber/new/" metdod="post"> --> 
+		<div class="simplenews-subscribe custom-subscribe-form-header"> <!--<form class="simplenews-subscribe custom-subscribe-form-header" action="https://service.govdelivery.com/accounts/USESAEI/subscriber/new/" method="post"> --> 
 			<a class="ess" href="https://service.govdelivery.com/accounts/USESAEI/subscriber/new/"><span class="mobile-hide">Subscribe</span></a> 
 			<!--</form>--></div>
 		<div class="simplenews-subscribe custom-subscribe-form-header">
@@ -598,11 +597,11 @@ var usagov_sayt_url = 'http://search.usa.gov/sayt?aid=4163&';var aid = 'esa';
 	
 	
 
-  <div class="content"><form action="//search.esa.gov/search" metdod="get" id="search-block-form" accept-charset="UTF-8"><div>
+  <div class="content"><form action="//search.esa.gov/search" method="get" id="search-block-form" accept-charset="UTF-8"><div>
 <div class="container-inline">
 <div class="form-item form-type-textfield form-item-query">
   <label class="element-invisible" for="edit-search-block-form--2">Search using USASearch </label>
- <input class="usagov-search-autocomplete ui-autocomplete-input ui-corner-all form-text" autocomplete="off" type="text" id="edit-search-block-form--2" name="query" value="What are you looking for today?" onblur="setTimeout('closeResults()',2000); if (tdis.value == '') {tdis.value = '';}"  onfocus="if (tdis.value == 'What are you looking for today?') {tdis.value = '';}"  size="15" maxlengtd="128" />
+ <input class="usagov-search-autocomplete ui-autocomplete-input ui-corner-all form-text" autocomplete="off" type="text" id="edit-search-block-form--2" name="query" value="What are you looking for today?" onblur="setTimeout('closeResults()',2000); if (this.value == '') {this.value = '';}"  onfocus="if (this.value == 'What are you looking for today?') {this.value = '';}"  size="15" maxlength="128" />
 </div>
 <input id="search-submit-topbar" rel="tooltip" data-placement="bottom" data-original-title="Click to search" type="image" src="images/search-box-button.png" height="32" width="26" border="0" a="Search" /><input type="hidden" name="affiliate" value="esa" />
 
@@ -746,281 +745,82 @@ var usagov_sayt_url = 'http://search.usa.gov/sayt?aid=4163&';var aid = 'esa';
 			    <div class="logo"></div>
 			    <div class="container">
 			    </div>
+			    </div>
 
-			<!-- countdown start -->
-			
-			<!-- countdown end --> 
-			</div>
-			
-			
 			<div>
 				<nav> 
 					<ul class="navigation">
 						<li class="btn btn-default"><a href="index.html">Home</a></li>
-						<li class="btn btn-default"><a href="meeting.html">Meetings</a></li>
+						<li class="btn btn-default"><a href="index.html#meetingInformation">Meetings</a></li>
 						<li class="btn btn-default"><a href="profiles.html">Membership</a></li>
-						<li class="btn btn-default"><a href="#contactUs">Contact</a></li>
+						<li class="btn btn-default"><a href="index.html#contactUs">Contact</a></li>
 					</ul>
 				</nav>
 			</div>
+
+			    <!-- Start Charter Page Content -->
+
+				<section class="container front-page">
+						<h1>FACA Documentation</h1>
+
+						<h3>Charters</h3>
+							<ul>
+								<li><a href="http://www.esa.doc.gov/sites/default/files/cdac/november-2015/cdac-charter-november-2015.pdf" target="blank"> U.S. Department of Commerce Charter of the Commerce Data Advisory Council</a></li>
+								<li><a href="http://www.esa.doc.gov/sites/default/files/cdac/cdac-commerce-data-dashboard-working-group-charter.pdf" target="blank"> Charter of the Commerce Data Advisory Council Working Group - Data Dashboard</a></li>
+								<li><a href="http://www.esa.doc.gov/sites/default/files/cdac/cdac-data-governance-working-group-charter.pdf" target="blank"> Charter of the Commerce Data Advisory Council Working Group - Data Governance</a></li>
+								<li><a href="http://www.esa.doc.gov/sites/default/files/cdac/cdac-new-exports-working-group-charter.pdf" target="blank"> Charter of the Commerce Data Advisory Council Working Group - New Exports</a></li>
+							</ul>
+
+
+				<h3>Federal Register Notices</h3>
+
+							<p>
+								<h4>January 5, 2016</h4>
+								<a href="http://www.gpo.gov/fdsys/pkg/FR-2016-01-05/pdf/2015-33154.pdf" target="blank"> Commerce Data Advisory Committee Notice of Open Meeting January 14, 2016: Federal Register Volume 81, No. 2 - January 5, 2016</a><br>
+								The Economic and Statistics Administration (ESA) is giving notice of a meeting of Commerce Data Advisory Council (CDAC). The Federal Advisory Committee Act (Pub. L. 92–463, 86 Stat. 770) requires that public notice of these meetings be announced in the Federal Register.
+							</p>
+							<br>
+							<p>
+								<h4>September 24, 2015</h4>
+								<a href="http://www.gpo.gov/fdsys/pkg/FR-2015-09-24/pdf/2015-24334.pdf" target="blank">Commerce Data Advisory Committee Notice of Open Meeting October 29-30, 2015: Federal Register Notice Volume 80, No. 185 -  September 24, 2015 </a> <br>
+								The Economic and Statistics Administration (ESA) is giving notice of a meeting of Commerce Data Advisory Council (CDAC). The Federal Advisory Committee Act (Pub. L. 92–463, 86 Stat. 770) requires that public notice of these meetings be announced in the Federal Register.
+							</p>
+							<br>
+							<p>
+								<h4>June 16, 2015</h4>
+								<a href="http://www.gpo.gov/fdsys/pkg/FR-2015-06-16/pdf/2015-14796.pdf" target="blank">Commerce Data Advisory Committee Notice of Open Meeting July 30, 2015: Federal Register Notice Volume 80, No. 115 - June 16, 2015</a> <br>
+								The Economic and Statistics Administration (ESA) is giving notice of a meeting of Commerce Data Advisory Council (CDAC). The Federal Advisory Committee Act (Pub. L. 92–463, 86 Stat. 770) requires that public notice of these meetings be announced in the Federal Register.
+							</p>
+							<br>
+							<p>
+								<h4>March 16, 2015</h4>
+								<a href="http://www.gpo.gov/fdsys/pkg/FR-2015-04-03/pdf/2015-07773.pdf" target="blank">Commerce Data Advisory Committee Notice of Open Meeting April  23-24, 2015: Federal Register Notice Volume 80, No. 64  - Friday, April 3, 2015</a> <br>
+								The Economic and Statistics Administration (ESA) is giving notice of a meeting of Commerce Data Advisory Council (CDAC). The Federal Advisory Committee Act (Pub. L. 92–463, 86 Stat. 770) requires that public notice of these meetings be announced in the Federal Register.
+							</p>
+							<br>
+							<p>
+								<h4>November 17, 2014</h4>
+								<a href="http://www.gpo.gov/fdsys/pkg/FR-2014-11-17/pdf/2014-26778.pdf" target="blank">Notice Of Establishment Of The Commerce Data Advisory Council (CDAC) And Solicitation Of Nominations For Membership:  Federal Register Notice Volume 79, No. 221 - November 17, 2014</a> <br>
+								Pursuant to 15 U.S.C. 1512 and the Federal Advisory Committee Act, as amended (5 U.S.C. Appendix 2, hereinafter the Act), the Under Secretary for Economic Affairs, Economics and Statistics Administration, announces the establishment of the Commerce Data Advisory Council (CDAC) by the Secretary, Department of Commerce. This notice also requests nominations for membership on the Council.
+							</p>
+
+				<h3>Membership Roster</h3>
+				<ul>
+					<li><a href="http://www.esa.doc.gov/sites/default/files/cdac/november-2015/cdac-members.pdf" target="blank">CDAC Members</a> (as of 10/15/15)</li>
+				</ul>
+
+				<h3> Contact: Burton Reist | <a href="mailto:breist@doc.gov" target="_top">breist@doc.gov</3>
+
+				<br>
+
+		</section> <!-- this end the charter page content -->
+
+
+
+
+
 			
-
-			<div class="meetingSection clearfix">
-				<div class="row countdownSection">
-					<h4>The next meeting of CDAC will be held in:</h4>
-					<div class="countdown clearfix"></div>
-				</div>
-<!-- 				<div class="natureImages">
-				    <div><img src="images/sliderPics/boat.jpg"></div>
-				    <div><img src="images/sliderPics/buildings.jpg"></div>
-				    <div><img src="images/sliderPics/grass.jpg"></div>
-				    <div><img src="images/sliderPics/boat.jpg"></div>
-				    <div><img src="images/sliderPics/buildings.jpg"></div>
-				</div>
-				<div class="carouselArrows"></div> -->
-
-
-				<div id="meetingInformation">
-					<h2> May 5-6, 2016</h2>
-					<h2> Google Office - New York</h2>
-					<h3>76 9th Ave.</h3>
-					<h3>New York, NY 10011</h3>				
-				</div>
-
-				<div id="meetingLinks">
-					<a href="#"><h3> Agenda </h3></a>
-					<a href="http://www.eventbrite.com/o/economic-and-statistics-administration-department-of-commerce-8227114475"><h3> Register to Attend</h3></a>
-					<a href="meeting.html"><h3> Meeting Information </h3></a><br>
-					<a href="#" style="padding-bottom: 40px"><h3> CDAC Meeting Live Streaming </h3></a>
-				</div>
-
-				<div id="meetingArchivesLink">
-					<a href="meeting.html"><h5> Meeting Archives</h5></a>
-				</div>
-			</div>
-
-
-			<!-- MISSION SECTION START -->
-			<section class="clearfix" id="missionSection">
-				
-				<!-- <div class="missionTitle"></div> -->
-				<div class="missionStatements">
-				    <div class="missionTextDiv">
-						<h1>MISSION</h1>
-
-					    <p>The CDAC provides Secretary Pritzker and the DOC data-bureau leadership with guidance on areas such as data management practices; common, open data standards; policy issues related to privacy, latency, and consistency; effective models for public-private partnership; external uses of Commerce data; and, methods to build new feedback loops between the Department and data users. 
-
-						The Council meets up to four times a year.  Council meetings are facilitated by the Chief Commerce Data Officer, Ian Kalin along with CDAC Co-Chairs, Daniel Castro and Kim Stevenson. </p>
-					</div>
-
-				    <div class="missionTextDiv">
-				    	<h1>GOALS</h1>
-					    <ul>
-					    	<li>Data management practices that make it easier to rack and disseminate integrated interoperable data for diverse users</li>
-					    	<li>Best practices that can be deployed across Commerce to achieve common, open standards related to taxonomy, vocabulary, APIs metadata, and other key data characteristics</li>
-					    	<li>Policy issues that arrive from expanding access to data, including issues related to privacy, latency, and consistency</li>
-					    	<li>Opportunities and risks related to the combination of public and private data sources and the development of joint data products and services resulting from public-private partnerships</li>
-					    	<li>External uses of Commerce data and similar federal, state, and private data sets by businesses</li>
-					    	<li>Methods to enhance communication and collaboration between stakeholders and subject-matter experts at Commerce on data access and use</li>
-					    </ul>
-				    </div>
-				</div>
-			</section>
-			<!-- MISSION SECTION END -->
-
-			<!-- NEWS SECTION START -->
-			<div class="pv-40 dark-translucent-bg parallax clearfix newsFromCDACContainer" id="newsFromCDAC">
-				<h2 class="newsFromCDACTitle">News from CDAC</h2>
-				<div class="carouselStyle">
-					<div class="container">
-						<h3 class="logo-font text-center">Doing More with Data</h3>
-						<div class="separator"></div>
-						<div class="row">
-							<div class="col-md-12">
-								<ul class="list">
-									<li class="clearfix">
-								    <a href="http://www.esa.doc.gov/under-secretary-blog/doing-more-data"><img src="images/blogpost_icon.png" style="height: 200px"></a>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="space-bottom"></div>
-					</div>
-					<div class="container">
-						<h3 class="logo-font text-center">Weather Data, Cybersecurity and Workforce Skills Focus of Upcoming Data Advisory Council</h3>
-						<div class="separator"></div>
-						<div class="row">
-							<div class="col-md-12">
-								<ul class="list"> 
-									<li class="clearfix">
-										<a href="http://www.esa.doc.gov/under-secretary-blog/weather-data-cybersecurity-and-workforce-skills-focus-upcoming-data-advisory-0"><img src="images/blogpost_icon.png" style="height: 200px"></a>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="space-bottom"></div>
-					</div>
-						<div class="container">
-							<div class="row">
-						<h3 class="logo-font text-center">Council Advises Continued Data Improvements</h3>
-						<div class="separator"></div>
-						<div class="row">
-							<div class="col-md-12">
-								<ul class="list">
-									<li class="clearfix">
-										<a href="https://www.commerce.gov/news/blog/2015/08/council-advises-continued-data-improvements"><img src="images/blogpost_icon.png" style="height: 200px"></a>
-									</li>
-								</ul>
-							</div>
-							</div>
-						</div>
-						<div class="space-bottom"></div>
-					</div>
-					<div class="container">
-						<h3 class="logo-font text-center">Commerce Data Advisory Committee Launches Efforts to Improve U.S. Exports</h3>
-						<div class="separator"></div>
-						<div class="row">
-							<div class="col-md-12">
-								<ul class="list">
-									<li class="clearfix">
-										<a href="https://www.commerce.gov/news/blog/2015/08/commerce-data-advisory-committee-launches-efforts-improve-us-exports"><img src="images/blogpost_icon.png" style="height: 200px"></a>
-									</li>
-								</ul>
-							</div>
-						</div>
-			
-						<div class="space-bottom"></div>	
-					</div>
-				</div>
-				
-			</div>
-			<!-- NEWS SECTION end -->
-
-			<!-- TWITTER SECTION START -->
-			<div class="CDACTwitter">
-				<div class="container-fluid" style="text-align: center">
-				<div class="twitterDiv">
-				<div class="col-md-3 col-sm-3" style="display:inline-block;"><img src="images/Twitter_logo_blue.png" class="twitterImage img-responsive"></div>
-				<a class="twitter-timeline col-md-9 col-sm-4 text-center" style="display:inline-block" href="https://twitter.com/hashtag/CDACMTG" data-widget-id="722851728702353409" data-chrome="nofooter" data-tweet-limit="1">#CDACMTG Tweets</a>
-				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-				</div>
-				</div>
-			</div>
-
-			<footer id="footer" class="clearfix dark footerStyle">
-			<!-- TWITTER SECTION END-->
-
-
-			<!-- section start -->
-			<!-- ================ -->
-			<section class="section clearfix" id="memberProfileSection">
-				<div class="container">
-					<h2 class="logo-font text-center text-muted">Member Profiles</h2>
-					<p class="lead text-center">Get to know the Council Leads by clicking on a profile picture!</p>
-					<div class="memberProfiles">
-					<!-- Tab panes -->
-					
-						<div class="tab-content clear-style">
-							<div class="tab-pane active" id="pill-1">
-								<div class="row">
-									<div class="col-md-4">
-										<div class="image-box text-center style-2 mb-20">
-											<a href="profiles.html"><img src="images/ian_kalin_pic.jpg" alt="" class="img-circle img-thumbnail"></a>
-											<div class="body padding-horizontal-clear">
-												<h4 class="logo-font title">Ian Kalin</h4>
-												<p class="small mb-10">Chief Commerce Data Officer</p>
-												<p class="lead text-default">Council Meeting Facilitator</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="image-box text-center style-2 mb-20">
-											<a href="profiles.html"><img src="images/stevenson-kim.png" alt="" class="img-circle img-thumbnail"></a>
-											<div class="body padding-horizontal-clear">
-												<h4 class="logo-font title">Kim Stevenson</h4>
-												<p class="small mb-10">Intel</p>
-												<p class="lead text-default">CDAC Co-Chair</p>
-												<p>(2015-2016)</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<div class="image-box text-center style-2 mb-20">
-											<a href="profiles.html"><img src="images/castro-daniel.png" alt="" class="img-circle img-thumbnail"></a>
-											<div class="body padding-horizontal-clear">
-												<h4 class="logo-font title">Daniel Castro</h4>
-												<p class="small mb-10">Center for Data Innovation</p>
-												<p class="lead text-default">CDAC Co-Chair</p> 
-												<p>(2015-2016)</p>
-											</div>
-										</div>
-									</div>
-								</div>
-
-							</div>
-						</div>
-					<!-- pills end -->
-					</div>
-					<div class="memberProfileLink"><a href="profiles.html"><h5>More Member Profiles</h5></a></div>
-				</div>				
-			</section>
-			<!-- section end -->
-
-			<footer id="footer" class="clearfix dark">
-
-				<!-- .footer start -->
-				<!-- ================ -->
-				<div class="footer">
-					<div class="container aboutCDACSection">
-						<div class="footer-inner">
-							<!-- <div class="row"> -->
-								<div class="col-md-6">
-									<div class="footer-content">
-										<div class="logo-footer"><img id="logo-footer" src="images/cdac-logo.png" alt=""></div>
-										<div class="row">
-											<div class="">
-												<h2>ABOUT CDAC</h2>
-                                                   <p>The CDAC consists of up to 20 members representing the entire spectrum of Commerce data including demographic, economic, scientific, environmental, patent, and geospatial data. These leaders come from the information technology, NGO, non-profit, and academic communities, and from local governments—leaders who appreciate the range of data that the Department of Commerce distributes and the full lifecycle of data collection, compilation, analysis, and dissemination. They offer a balanced perspective and varied expertise to ensure meaningful dialogue and guidance on how the Commerce Department can realize its vision as America's Data Agency.</p>
-											</div>
-											<div class="">
-												<div id="footerLinks">
-													<a href="#meetingInformation"><p> Meetings </p></a>
-													<a href="#missionSection"><p> Mission and Goals </p></a>
-													<a href="#newsFromCDAC"><p> News from CDAC </p></a>
-													<a href="#memberProfileSection"><p> Membership </p></a>
-													<a href="faca-documentation.html"><p>FACA Documentation</p></a>
-												</div>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="footer-content">
-										<div class="contactUs" id="contactUs">
-												<div class="contactUs">
-													<h4>Contact Us</h4>
-													<div><i class="fa fa-male"></i><a href="#">Burton Reist</a></div>
-													<div>Director of External Affairs and Designated Federal Official, CDAC</div>
-													<div><i class="fa fa-fa-location-arrow"></i>Department of Commerce</div>
-													<div>Economics and Statistics Administration</div>
-													<div>1401 Constitution Ave NW</div>
-													<div>Washington, DC 20230</div>
-													<div><i class="fa fa-phone pr-10 text-default"></i> (202) 482-3331</div>
-													<div><i class="fa fa-envelope-o pr-10"></i><a href="mailto:CDAC@doc.gov" style="text-decoration: underline; padding-top: 5px">CDAC@doc.gov</a></div>
-												</div>
-										</div>
-									</div>
-								</div>
-							<!-- </div> -->
-						</div>
-					</div>
-				</div>
-				<!-- .footer end -->
-
-			</footer>
-			<!-- footer end -->
-			
+		
 		</div>
 
 
@@ -1255,12 +1055,12 @@ Email: <a href="mailto:esawebmaster@doc.gov">ESAwebmaster@doc.gov</a>
 	</div>
  <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-var addtdis_config = {"pubid":"ra-4e2ec8785ab49002","services_compact":"blogger,digg,email,facebook,google_plusone_share,reddit,twitter,yahoobkm,more","data_track_clickback":true,"ui_508_compliant":false,"ui_click":false,"ui_cobrand":"","ui_delay":0,"ui_header_background":"","ui_header_color":"","ui_open_windows":false,"ui_use_css":true,"ui_use_addressbook":false,"ui_language":"en"}
-var addtdis_share = {"templates":{"twitter":"{{title}} {{url}} via @Addtdis"}}
+var addthis_config = {"pubid":"ra-4e2ec8785ab49002","services_compact":"blogger,digg,email,facebook,google_plusone_share,reddit,twitter,yahoobkm,more","data_track_clickback":true,"ui_508_compliant":false,"ui_click":false,"ui_cobrand":"","ui_delay":0,"ui_header_background":"","ui_header_color":"","ui_open_windows":false,"ui_use_css":true,"ui_use_addressbook":false,"ui_language":"en"}
+var addthis_share = {"templates":{"twitter":"{{title}} {{url}} via @AddThis"}}
 //--><!]]>
 </script>
-<script type="text/javascript" src="http://s7.addtdis.com/js/300/addtdis_widget.js#pubid=ra-4e2ec8785ab49002&amp;async=1"></script>
-<script type="text/javascript" src="http://www.esa.doc.gov/sites/all/modules/addtdis/addtdis.js?o3qemm"></script>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e2ec8785ab49002&amp;async=1"></script>
+<script type="text/javascript" src="http://www.esa.doc.gov/sites/all/modules/addthis/addthis.js?o3qemm"></script>
 <script type="text/javascript" src="http://www.esa.doc.gov/modules/statistics/statistics.js?o3qemm"></script>
 <script type="text/javascript" src="http://www.esa.doc.gov/sites/all/themes/icompany/js/bootstrap.js?o3qemm"></script>
  
@@ -1273,17 +1073,17 @@ var addtdis_share = {"templates":{"twitter":"{{title}} {{url}} via @Addtdis"}}
   	
 	$('.portfolio-hover').each(function(){
 		
-		/* move tdis in image container */
-		var portolioImageContainer = $(tdis).siblings('.views-field ').find('.tdumbnail .portfolio-image');
-		$(tdis).appendTo(portolioImageContainer);
+		/* move this in image container */
+		var portolioImageContainer = $(this).siblings('.views-field ').find('.thumbnail .portfolio-image');
+		$(this).appendTo(portolioImageContainer);
 		
 		/* add styles */
-		var portolioImageContainerHeight = $(tdis).parent().height();
-		var portolioImageContainerwidth = $(tdis).parent().width();
+		var portolioImageContainerHeight = $(this).parent().height();
+		var portolioImageContainerWidth = $(this).parent().width();
 		
 		/* set width and height 
-		$(tdis).css({
-			width: portolioImageContainerwidth,
+		$(this).css({
+			width: portolioImageContainerWidth,
 			height: portolioImageContainerHeight,
 		})
 		*/
@@ -1312,11 +1112,11 @@ var addtdis_share = {"templates":{"twitter":"{{title}} {{url}} via @Addtdis"}}
 (function ($) {
   $(document).ready(function () {  
 	//$( "#myTab" ).tabs();  
-     var leftheight = $('#highlighted').height();
-	 var rightheight = $('#highlighted_2').height();
-	 var Higher = Matd.max(leftheight, rightheight);
+     var leftHeight = $('#highlighted').height();
+	 var rightHeight = $('#highlighted_2').height();
+	 var Higher = Math.max(leftHeight, rightHeight);
 	 
-	 // set height of block to tdat whichever is higher
+	 // set height of block to that whichever is higher
 	 $("#highlighted").css("minHeight", Higher);
 	 $("#highlighted_2 .region").css("minHeight", Higher);
 
@@ -1362,9 +1162,9 @@ var addtdis_share = {"templates":{"twitter":"{{title}} {{url}} via @Addtdis"}}
 		<!-- Slick Carousel -->
 		<script   src="https://code.jquery.com/jquery-migrate-1.2.1.js"   integrity="sha256-WFZLwje2g/SCw6gt7wWfJ7K+QRCdI316I4AHS1tPIr4="   crossorigin="anonymous"></script>
 		<script type="text/javascript" src="plugins/slick/slick.js"></script>
-		<!-- SmootdScroll javascript -->
+		<!-- SmoothScroll javascript -->
 		<script type="text/javascript" src="plugins/jquery.browser.js"></script>
-		<script type="text/javascript" src="plugins/SmootdScroll.js"></script>
+		<script type="text/javascript" src="plugins/SmoothScroll.js"></script>
 		<!-- Count Down javascript -->
 		<script type="text/javascript" src="plugins/jquery.countdown/jquery.plugin.js"></script>
 		<script type="text/javascript" src="plugins/jquery.countdown/jquery.countdown.js"></script>

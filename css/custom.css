@@ -8,6 +8,13 @@ License URI:http://support.wrapbootstrap.com/
 File Description: Place here your custom CSS styles
 */
 
+
+
+/*Make the ESA header and footer full-width and other things*/
+.container-fluid {
+	max-width: none;
+}
+
 h1#site-name {
 	text-transform: none;
 }
@@ -21,7 +28,6 @@ div.clearfix.block.blockOverride {
 	bottom: 0px;
 }
 
-
 div.container-fluid.topNavContainer.theme-border#page-wrapper{
 	min-height: 0px;
 }
@@ -30,67 +36,187 @@ div.tp-bannertimer {
 	display: none;
 }
 
+
+
+
+/*Applies Century Gothic to just the CDAC website*/
+section.front-page {
+	font-family: 'Muli', Arial, sans-serif;
+}
+
+
+
+
+/*Gives padding to the words on the parallax banner*/
+#headerSection p:first-child {
+	margin-top: 300px;
+}
+
+
+
+
+
+/*Jumbotron/Parallax section*/
+.jumbotron {
+    position: relative;
+    background: url('../images/CDAC-Header-04.png') no-repeat fixed;
+    width: 100%;
+    /*height: 100px;*/
+    /*background-size: cover;*/
+    overflow: hidden;
+    margin-bottom: 0px;
+    padding-top: 60px;
+    padding-bottom: 2px;
+}
+
+#headerSection .logo {
+	background: url('../images/cdac-logo-final3.png') no-repeat fixed;
+	z-index: 200;
+	margin: auto;
+	height: 700px;
+}
+
+/*Countdown Section*/
+
+.countdownSection {
+	background-color: #3075c4;
+	color: white;
+	padding-bottom: 30px;
+}
+
+.countdownSection h4 {
+	text-align: center;
+	padding-top: 50px;
+}
+
+.is-countdown {
+  /*border: 1px solid white;*/
+  background-color: #3075c4;
+  border: none;
+}
+.countdown-row {
+  height: 0;
+  padding: 0;
+}
+.countdown-section {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid white;
+  background-color: transparent;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  border-radius: 5%;
+  color: white;
+}
+.countdown-show4 .countdown-section {
+  width: 24%;
+  margin: 10px 0.5%;
+}
+.countdown-amount {
+  font-size: 36px;
+  font-weight: 700;
+  display: block;
+}
+.countdown-period {
+  display: block;
+  font-size: 28px;
+  line-height: 1.2;
+  margin-top: 15px;
+}
+/* Small devices (tablets, phones less than 767px) */
+@media (max-width: 767px) {
+  .countdown-amount {
+    font-size: 24px;
+  }
+  .countdown-period {
+    font-size: 18px;
+  }
+}
+/* Extra small devices (phones, less than 480px) */
+@media (max-width: 480px) {
+  .countdown-amount {
+    font-size: 18px;
+  }
+  .countdown-period {
+    font-size: 10px;
+  }
+}
+
+
+/*Meeting Information Section*/
+/*Credit for texture is from http://www.transparenttextures.com/*/
+
+div.meetingSection {
+/*	background-color: #f5f5f5;
+	background-image: url("../images/absurdity.png");*/
+	background-color: #3075c4;
+}
+
 #meetingInformation {
 	text-align: center;
-	padding-top: 40px;
+	padding-top: 0px;
+	color:white;
+}
+
+#meetingInformation h3 {
+	margin-top: 0px;
+	font-size: 16px;
 }
 
 #meetingLinks {
 	text-align: center;
+	color: white;
 }
 
 #meetingLinks a {
 	display: inline-block;
-	padding-right: 20px;
+	padding-right: 8px;
 	text-decoration: underline;
+	color: white;
 }
 
 #meetingArchivesLink {
 	text-align: center;
 	text-decoration: underline;
+	color: white;
 }
 
-div.container.bannerContainer {
-	margin: 0px;
-	padding: 0px;
+#meetingArchivesLink a {
+	color: white;
 }
 
-img.imageBanner {
-	padding: 0px;
+
+/*News from CDAC Section*/
+.newsFromCDACContainer {
+	background-color: #70639c;
 }
 
-#intro {
-	position: relative;
+.newsFromCDACContainer h3 {
+	color: white;
 }
 
-.fullwidthbanner {
-	background: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), rgba(0,0,0,0.55) url('../images/road-cloud.jpg') center center no-repeat;
-}
-
-.bannerTextLine1 {
-	padding-top: 275px;
-	padding-left: 60px;
-	font-weight: 900;
-}
-
-.bannerTextLine2 {
-	padding-left: 60px;
-	font-weight: 900;
+.newsFromCDACContainer a {
+	color: white;
+	text-decoration: underline;
 }
 
 .newsFromCDACTitle {
 	text-align: center;
 	padding-top: 30px;
+	color: white;
 }
 
 .newsArchiveLink {
 	text-align: center;
 	padding-top: 58px;
 	padding-bottom: 4px;
+	color: white;
+	text-decoration: underline;
 }
 
 .newsControlDesign {
 	padding-top: 20px;
+	color: white;
 }
 
 ul.list li {
@@ -122,23 +248,18 @@ div.carouselStyle .owl-next {
 	padding-left: 30px;
 }
 
-.jumbotron {
-    position: relative;
-    background: #000 url('../images/road-cloud.jpg') center center;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    overflow: hidden;
-    margin-bottom: 0px;
-}
+
 
 /*FOR FUTURE: figure out why you have to set the width of the div for Slick and for the div with the arrows
 */
-.natureImages {
+/*.natureImages {
 	width: 750px;
 	margin: auto;
 	padding-top: 50px;
-}
+}*/
+
+
+/*MISSION AND GOALS SECTION*/
 
 .missionTitle {
 	text-align: center;
@@ -147,31 +268,131 @@ div.carouselStyle .owl-next {
 .missionStatements {
 	width: 800px;
 	margin: auto;
+	margin-top: 30px;
+	top: 20%;
 }
 
-.slick-dots {
-	margin-left: 0px;
+.missionStatements h1 {
+	text-align: center;
 }
 
-.missionSection {
-	background-color: pink;
+.missionStatements p {
+	font-size: 16px;
+	line-height: 1.85;
 }
+
+.missionStatements li {
+	font-size: 16px;
+}
+
+.missionTextDiv {
+	background-color: rgba(255, 255, 255, 0.9);
+	color: black;
+}
+
+section#missionSection {
+    position: relative;
+    background: white url('../images/cdac-logo-medium-fade.png') no-repeat fixed;
+    width: 100%;
+    /*height: 100px;*/
+    /*background-size: cover;*/
+    overflow: hidden;
+    margin-bottom: 0px;
+    height: 500px;
+}
+
+button.slick-prev {
+	background-color: #422b5d;
+	left: -60px;
+}
+
+button.slick-next {
+	background-color: #422b5d;
+	right: -60px;
+}
+
+
+/*MEMBER PROFILE SECTION*/
+
+#memberProfileSection {
+	background-color: #3075c4;
+	color: white;
+}
+
+.memberProfiles {
+	margin-top: 75px;
+}
+
+.lead {
+	margin-bottom: 5px;
+}
+
+#memberProfileSection h2 {
+	color: white;
+	font-weight: bold;
+}
+
+/*.memberprofileLink,
+.memberprofileLink:hover {
+	text-align: center;
+	padding-top: 50px;
+	color: white;
+}
+
+.member-profile-text,
+.member-profile-text:hover,
+.member-profile-text:active{
+	color: white;
+	text-decoration: none;
+		
+}*/
 
 .memberProfileLink {
 	text-align: center;
-	padding-top: 50px;
+	padding-top: 30px;
+	padding-bottom: 20px;
 }
 
+
+
+.memberProfileLink a h5 {
+	color: white;
+	font-size: 15px;
+	text-decoration: underline;
+
+}
+
+.memberTable {
+	margin-top: 30px;
+}
+
+.memberTable td, th {
+	padding-left: 3px;
+	padding-right: 10px;
+}
+
+/*TWITTER SECTION*/
 .twitterDiv {
 	display: inline-block;
 }
 
 .CDACTwitter {
-	background-color: green;
+	background-color: white;;
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
 
+
+/*ABOUT CDAC SECTION*/
+
+.footerStyle {
+}
+
+.aboutCDACSection {
+	margin-top: 60px;
+	margin-bottom: 60px;
+
+}
 #footerLinks a {
 	display: inline-block;
 	padding-right: 20px;
@@ -181,3 +402,75 @@ div.carouselStyle .owl-next {
 ul.social-links li {
 	display: inline-block;
 }
+
+.contactUs {
+	margin-left: 50px;
+	margin-top: 70px;
+}
+
+
+/* Modals */
+
+.modal-title{
+	font-size: 25px;
+}
+
+.container.modal.fade.in
+{
+	background-color: transparent;
+	box-shadow: none;
+    border: none;
+}
+
+.modal-header > i{
+	float: right;
+}
+
+.modal-content{
+	padding: 20px;
+}
+.contactUs a {
+	margin-left: 5px;
+}
+
+.contactUs div {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/* Navigation */
+nav {    
+	border-top: solid 1px #f1f1f1;
+    border-bottom: solid 1px #f1f1f1;
+}
+
+.navigation,
+.navigation > li{
+	text-decoration: none;
+	list-style: none;
+	text-align: center;
+	border-radius: 0;
+	margin: 10px;
+	border-color: transparent;
+	box-shadow: none;
+	font-size: 20px;
+/*  position: fixed;
+    background: black no-repeat;*/
+    text-shadow: none;
+    font-family:'Muli', Arial, sans-serif;
+}
+
+.navigation >li.btn.btn-default:hover {
+	background-color: #f1f1f1;
+	border-color: #f1f1f1;
+}
+
+.navigation >li.btn.btn-default a:hover {
+	text-decoration: none;
+}
+
+nav > ul > li > a:link, a:hover{
+	text-decoration: none;
+
+}
+
