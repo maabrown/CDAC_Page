@@ -62,6 +62,7 @@ section.front-page {
     background: url('../images/CDAC-Header-04.png') repeat fixed;
     width: 100%;
     /*height: 100px;*/
+    height: 500px;
     background-size: cover;
     overflow: hidden;
     margin-bottom: 0px;

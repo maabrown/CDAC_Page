@@ -499,12 +499,13 @@ var usagov_sayt_url = 'http://search.usa.gov/sayt?aid=4163&';var aid = 'esa';
 	    });
 	})(jQuery);
 	
-	($(document).ready(function() {
+	(function($){
+		$(document).ready(function() {
 		selectnav('nav', {
 			label: 'Navigation'
 		});
 		console.log('mark selectnav working');
-	})
+	})}(jQuery));
 
 	//back to top
 	(function ($) {
@@ -526,7 +527,7 @@ var usagov_sayt_url = 'http://search.usa.gov/sayt?aid=4163&';var aid = 'esa';
 </script>
 <div id="dom-target" style="display:none;">
 	<lo classattr="April 01, 2016"><a  class="indicator-item" href="http://www.bls.gov/bls/newsrels.htm#OEUS" target="_blank"><table><tbody><tr><td class="title" colspan="3">Unemployment Rate</td></tr><tr><td class="timeframe">December 2015</td><td class="data-point" rowspan="2">5.0<span>%</span></td><td class="trend down" rowspan="2"></td></tr><tr><td class="release-date">Released: April 01, 2016</td></tr></tbody></table></a></lo></div>
-<script type="text/javascript" src="/sites/all/themes/icompany/js/date.js"></script>
+<!-- <script type="text/javascript" src="/sites/all/themes/icompany/js/date.js"></script> -->
 <div id="indicator1" style="display:none;"></div>
 <div id="indicator2" style="display:none;"></div>
 <div id="nv-target" style="display:none;"></div>
@@ -536,8 +537,8 @@ var usagov_sayt_url = 'http://search.usa.gov/sayt?aid=4163&';var aid = 'esa';
 <div id="feed3" style="display:none;"></div>
 <div id="feed4" style="display:none;"></div><!---BEA locked GDP and PI --->
 <div id="feed5" style="display:none;"></div>
-<script type="text/javascript" src="/sites/all/themes/icompany/js/indicator.js"></script>
-<script type="text/javascript" src="/sites/all/themes/icompany/js/relschedule.js"></script>
+<script type="text/javascript" src="js/indicator.js"></script>
+<script type="text/javascript" src="js/relschedule.js"></script>
 <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 <script>
 	// Data Table Sorting Capability
@@ -741,12 +742,17 @@ var usagov_sayt_url = 'http://search.usa.gov/sayt?aid=4163&';var aid = 'esa';
 					<h1 class="bannerTextLine2">More CDAC</h3>
 				</div>
 			</div> -->
+<script type="text/javascript" src="plugins/jquery.js"></script>
 
-			<div class="jumbotron" style="height: 500px" id="headerSection">
+			<div class="jumbotron" id="headerSection">
 			    <div class="logo"></div>
 			    <div class="container">
 			    </div>
+			    
+<script type="text/javascript"> var tpj=jQuery;               // MAKE JQUERY PLUGIN CONFLICTFREE
+tpj.noConflict();    tpj('#headerSection').parallax('50%', .20);
 
+    tpj('#headerSection .logo').parallax('50%', .9);</script>
 			<!-- countdown start -->
 			
 			<!-- countdown end --> 
@@ -1250,7 +1256,7 @@ Email: <a href="mailto:esawebmaster@doc.gov">ESAwebmaster@doc.gov</a>
 <!--container fluid and page wrapper--> 
 <span class="divider"></span>
 <div id="feedback-div" class="visible-desktop"> <a data-original-title="Give us your valuable feedback" rel="tooltip" data-placement="right" id="feedback-link" href="#myModal" role="button"  data-toggle="modal"><img src="/sites/all/themes/icompany/img/feedback.png" alt="" /></a> </div>
-<div id="toTop" ><img class="visible-desktop" src="/sites/all/themes/icompany/img/toTop.png" alt="Go to top" /></div>
+<div id="toTop" ><img class="visible-desktop" src="images/toTop.png" alt="Go to top" /></div>
 <div id="preLoad" style="display:none; visibility:hidden;"> <!-- Preload Images for backgrounds -->
 	</div>
  <script type="text/javascript">
@@ -1258,9 +1264,9 @@ Email: <a href="mailto:esawebmaster@doc.gov">ESAwebmaster@doc.gov</a>
 var addtdis_config = {"pubid":"ra-4e2ec8785ab49002","services_compact":"blogger,digg,email,facebook,google_plusone_share,reddit,twitter,yahoobkm,more","data_track_clickback":true,"ui_508_compliant":false,"ui_click":false,"ui_cobrand":"","ui_delay":0,"ui_header_background":"","ui_header_color":"","ui_open_windows":false,"ui_use_css":true,"ui_use_addressbook":false,"ui_language":"en"}
 var addtdis_share = {"templates":{"twitter":"{{title}} {{url}} via @Addtdis"}}
 //--><!]]>
-</script>
+</script><!-- 
 <script type="text/javascript" src="http://s7.addtdis.com/js/300/addtdis_widget.js#pubid=ra-4e2ec8785ab49002&amp;async=1"></script>
-<script type="text/javascript" src="http://www.esa.doc.gov/sites/all/modules/addtdis/addtdis.js?o3qemm"></script>
+<script type="text/javascript" src="http://www.esa.doc.gov/sites/all/modules/addtdis/addtdis.js?o3qemm"></script> -->
 <script type="text/javascript" src="http://www.esa.doc.gov/modules/statistics/statistics.js?o3qemm"></script>
 <script type="text/javascript" src="http://www.esa.doc.gov/sites/all/themes/icompany/js/bootstrap.js?o3qemm"></script>
  
@@ -1307,7 +1313,7 @@ var addtdis_share = {"templates":{"twitter":"{{title}} {{url}} via @Addtdis"}}
 </script> 
 
 <!-- other scripts --> 
-<script src="/sites/all/themes/icompany/js/image-caption/jquery.caption.js"  type="text/javascript"></script> 
+<script src="js/jquery.caption.js"  type="text/javascript"></script> 
 <script type="text/javascript">  
 (function ($) {
   $(document).ready(function () {  
@@ -1350,13 +1356,6 @@ var addtdis_share = {"templates":{"twitter":"{{title}} {{url}} via @Addtdis"}}
 		<script type="text/javascript" src="plugins/jquery.countTo.js"></script>
 		<!-- Parallax javascript -->
 		<script src="plugins/jquery.parallax-1.1.3.js"></script>
-		<!-- Contact form -->
-		<script src="plugins/jquery.validate.js"></script>
-		<!-- Google Maps javascript -->
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&amp;signed_in=true"></script>
-		<script type="text/javascript" src="js/google.map.config.js"></script>
-		<!-- Background Video -->
-		<script src="plugins/vide/jquery.vide.js"></script>
 		<!-- Owl carousel javascript -->
 		<script type="text/javascript" src="plugins/owl-carousel/owl.carousel.js"></script>
 		<!-- Slick Carousel -->
@@ -1364,7 +1363,7 @@ var addtdis_share = {"templates":{"twitter":"{{title}} {{url}} via @Addtdis"}}
 		<script type="text/javascript" src="plugins/slick/slick.js"></script>
 		<!-- SmootdScroll javascript -->
 		<script type="text/javascript" src="plugins/jquery.browser.js"></script>
-		<script type="text/javascript" src="plugins/SmootdScroll.js"></script>
+		<script type="text/javascript" src="plugins/SmoothScroll.js"></script>
 		<!-- Count Down javascript -->
 		<script type="text/javascript" src="plugins/jquery.countdown/jquery.plugin.js"></script>
 		<script type="text/javascript" src="plugins/jquery.countdown/jquery.countdown.js"></script>
